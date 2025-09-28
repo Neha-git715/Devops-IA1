@@ -1,8 +1,12 @@
-# test_hello.py
+import unittest
+from hello import greet
 
+class TestHello(unittest.TestCase):
+    def test_default_greeting(self):
+        self.assertEqual(greet(), "Hello, Bazel!")
 
-import hello
+    def test_custom_greeting(self):
+        self.assertEqual(greet("DevOps"), "Hello, DevOps!")
 
-
-def test_say():
-    assert hello.say() == "Hello from Bazel!"
+if __name__ == "__main__":
+    unittest.main()

@@ -7,7 +7,7 @@ py_binary(
 )
 
 py_test(
-    name = "test_hello",
+    name = "hello_test",
     srcs = ["test_hello.py"],
-    deps = [":hello_py"],
+    deps = [":hello_py"],  # test depends on your binary
 )
